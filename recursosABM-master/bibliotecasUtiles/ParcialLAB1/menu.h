@@ -22,4 +22,12 @@ int pedirOpcionModificacionPelicula();
  *
  */
 int getOptionShow();
+
+/** \brief
+ *
+ * \return int
+ *
+ */
+int pedirOpcionNacionalidad();
+
 #endif // MENU_H_INCLUDED

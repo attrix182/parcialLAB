@@ -53,6 +53,11 @@ int main()
                 listarPeliculasPorNacionalidad(listadoPeliculas, listadoActores, TAM, "EEUU");
                 printf("\n");
                 break;
+            case 3:
+                listarActoresPorGenero(listadoPeliculas, listadoActores, len, "Accion");
+                listarActoresPorGenero(listadoPeliculas, listadoActores, len, "Terror");
+                listarActoresPorGenero(listadoPeliculas, listadoActores, len, "Comedia");
+            break
 
             }
             break;

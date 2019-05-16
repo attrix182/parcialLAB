@@ -174,12 +174,12 @@ int harcodePeliculas(ePelicula listado[], int len)
 {
     int i;
 
-    int id[4]= {1000, 1002, 1003, 1004};
-    int codigoPelicula[4]= {999, 666, 555, 777};
-    char titulo[4][51]= {"terminator ", "thor ", "it", "gladiador"};
-    int fechaDeEstreno[4]= { 2001, 2002, 2003, 2004};
-    char genero[4][21]= { "Accion", "Accion", "Terror", "Romantica"};
-    int idActor[4] = {1, 5, 4, 4};
+    int id[6]= {1000, 1001, 1002, 1003, 1004, 1005};
+    int codigoPelicula[6]= {999, 666, 555, 777, 111, 222};
+    char titulo[6][51]= {"terminator ", "thor ", "it", "gladiador", "scary movie", "yo soy asi"};
+    int fechaDeEstreno[6]= { 2020, 2019, 2018, 2018, 2012, 1990};
+    char genero[6][21]= { "Accion", "Accion", "Terror", "Romantica", "comedia", "otro"};
+    int idActor[6] = {1, 5, 4, 4};
     //  int estado[4]= {0, 0, 0, 0};
 
     for(i=0; i<4; i++)

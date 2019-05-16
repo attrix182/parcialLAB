@@ -52,18 +52,59 @@ int mostrarPeliculasConActores(ePelicula listadoPeliculas[], eActor listadoActor
 int listarPeliculasPorNacionalidad(ePelicula listadoPel[], eActor listadoAct[], int len,  char nacionalidadAlistar[21])
 {
     int i;
-    int posActorDeNacionalidad;
+    int j;
+ //             int posActorDeNacionalidad;
     printf("Peliculas que trabajaron actores de de %s \n", nacionalidadAlistar);
 
     for(i = 0; i<len; i++)
     {
         if(listadoAct[i].estado == 0 && stricmp(nacionalidadAlistar, listadoAct[i].nacionalidad)==0)
         {
-            posActorDeNacionalidad = buscarPeliPorID(listadoPel, len, listadoPel[i].id);
-            printf("%10s \n",listadoPel[posActorDeNacionalidad].titulo);
-        }
+            for(j = 0; j<len; j++)
+            {
+                 if(listadoPel[j].idActor == listadoAct[i].id)
+                printf("%10s \n",listadoPel[j].titulo);
+            }
+
+
+    }
 
     }
     return 0;
 }
 
+int listarPeliculasPorNacionalidadIngresa(ePelicula listadoPel[], eActor listadoAct[], int len,  char nacionalidadAlistar[21])
+{
+    int i;
+    int j;
+
+    printf("Peliculas que trabajaron actores de de %s \n", nacionalidadAlistar);
+
+    for(i = 0; i<len; i++)
+    {
+        if(listadoAct[i].estado == 0 && stricmp(nacionalidadAlistar, listadoAct[i].nacionalidad)==0)
+        {
+            for(j = 0; j<len; j++)
+            {
+                 if(listadoPel[j].idActor == listadoAct[i].id)
+                printf("%10s \n",listadoPel[j].titulo);
+            }
+
+
+    }
+
+    }
+    return 0;
+}
+
+int peliculasAgrupadasPorGenero(ePelicula listadoPel[], eActor listadoAct[], int len, char generoAlistar[21])
+{
+    int i;
+    for(i = 0; i<len; i++)
+        if(listadoAct[i].estado == 0 && stricmp(generoAlistar, listadoPel[i].genero)==0)
+    {
+        printf("%s  \n", listadoPel[i].titulo);
+    }
+
+ printf("\n");
+}
