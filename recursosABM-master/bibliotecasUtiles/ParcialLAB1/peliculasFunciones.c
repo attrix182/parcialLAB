@@ -38,7 +38,9 @@ int altaPeliculas(ePelicula listado[], eActor listadoActores[], int len)
 
     while(codigoPelicula < 100 || codigoPelicula > 999)
     {
+
         codigoPelicula = getInt("Reingrese un codigo valido 100/999 \n");
+
     }
 
 
@@ -67,7 +69,7 @@ int altaPeliculas(ePelicula listado[], eActor listadoActores[], int len)
 
     do
     {
-        generoNumero = getInt(" Ingrese genero \n 1.Accion 2.Comedia 3.Terror 4.Otro  \n");
+        generoNumero = getInt(" Ingrese genero \n 1.Accion 2.Comedia 3.Terror 4.Otro 5.Romantica  \n");
 
         switch(generoNumero)
         {
@@ -83,14 +85,17 @@ int altaPeliculas(ePelicula listado[], eActor listadoActores[], int len)
         case 4:
             strcpy(genero, "otro");
             break;
+        case 5:
+            strcpy(genero, "romantica");
+            break;
         default:
 
             printf("Erroneo. Genero inexistente");
             break;
         }
     }
-    while(generoNumero > 4);
-
+    while(generoNumero > 5);
+    mostrarListadoActores(listadoActores, len);
     idActor = getInt("id de actor principal\n");
     idExiste = buscarActorPorID(listadoActores, len, idActor);
     while(idExiste == -1)
@@ -169,15 +174,15 @@ int harcodePeliculas(ePelicula listado[], int len)
 {
     int i;
 
-    int id[5]= {1000, 1002, 1003, 1004, 1005};
-    int codigoPelicula[5]= {111, 222, 333, 444, 555};
-    char titulo[5][51]= {"Avengers", "Up", "Iron Man", "Batman", "Silencio"};
-    int fechaDeEstreno[5]= { 2001, 2002, 2003, 2004, 2005};
-    char genero[5][21]= { "Accion", "Comedia", "Accion", "Accion", "Terror"};
-    int idActor[5] = {1, 2, 3, 3, 4};
+    int id[4]= {1000, 1002, 1003, 1004};
+    int codigoPelicula[4]= {999, 666, 555, 777};
+    char titulo[4][51]= {"terminator ", "thor ", "it", "gladiador"};
+    int fechaDeEstreno[4]= { 2001, 2002, 2003, 2004};
+    char genero[4][21]= { "Accion", "Accion", "Terror", "Romantica"};
+    int idActor[4] = {1, 5, 4, 4};
     //  int estado[4]= {0, 0, 0, 0};
 
-    for(i=0; i<5; i++)
+    for(i=0; i<4; i++)
     {
 
         listado[i].id = id[i];
@@ -210,30 +215,7 @@ int buscarLibrePelicula(ePelicula listado[], int len)
     return id;
 }
 
-int mostrarPeliculasConActores(ePelicula listadoPeliculas[], eActor listadoActores[], int len)
-{
-    int i;
-    int posActor;
-    printf("%10s - %10s - %8s - %10s - %10s - %10s \n", "ID", "codigoPelicula", "titulo", "fechaDeEstreno", "genero", " Actor ");
 
-
-    for(i = 0; i < len; i++)
-    {
-        if(listadoPeliculas[i].estado == 0)
-        {
-
-            posActor = buscarActorPorID(listadoActores, len, listadoPeliculas[i].idActor);
-
-
-            printf("%10d %10d %13s %15d %15s %20s  \n", listadoPeliculas[i].id, listadoPeliculas[i].codigoPelicula, listadoPeliculas[i].titulo, listadoPeliculas[i].fechaDeEstreno, listadoPeliculas[i].genero, listadoActores[posActor].nombreActor);
-
-        }
-
-    }
-
-
-    return 0;
-}
 
 int modificacionPelicula(ePelicula listadoPeliculas[], eActor listadoActores[], int len, int id, int option)
 {

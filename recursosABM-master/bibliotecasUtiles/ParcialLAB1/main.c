@@ -21,6 +21,7 @@ int main()
 
     int opcion;
     int opcionMod;
+    int opcionMenu;
     char seguir = 's';
     int idExiste;
     int id;
@@ -38,21 +39,22 @@ int main()
 
             break;
         case 2:
-            printf("   Listado de Peliculas SIN Actores  \n");
-            mostrarListadoPeliculas(listadoPeliculas, TAM);
-            printf("\n");
-            printf("   Listado de Peliculas CON Actores  \n");
-            mostrarPeliculasConActores(listadoPeliculas, listadoActores, TAM);
-            printf("\n");
-            printf("   Listado de Peliculas por FECHA  \n");
-            listarPeliculasPorFecha(listadoPeliculas, TAM);
+            opcionMenu = getOptionShow();
+            switch(opcionMenu)
+            {
 
-            printf("   Listado de Actores por nacionalidad  \n");
-            listarActoresPorNacionalidad(listadoActores, TAM);
+            case 1:
+                printf("   Listado de Peliculas CON Actores Y Genero \n");
+                mostrarPeliculasConActores(listadoPeliculas, listadoActores, TAM);
+                printf("\n");
+                break;
 
-            printf("   Listado de Actores por genero  \n");
-            listarActoresPorGenero(listadoPeliculas, listadoActores, TAM, "accion");
+            case 2:
+                listarPeliculasPorNacionalidad(listadoPeliculas, listadoActores, TAM, "EEUU");
+                printf("\n");
+                break;
 
+            }
             break;
         case 3:
 

@@ -90,15 +90,7 @@ indicate UP or DOWN order
  */
 int buscarLibrePelicula(ePelicula[], int len);
 
-/** \brief
- *
- * \param ePelicula[]
- * \param ePropietario[]
- * \param len int
- * \return int
- *
- */
-int mostrarPeliculasConActores(ePelicula[], eActor[], int len);
+
 
 /** \brief modify a existing list of employees the values received as parameters in the first empty position
  * \param list employee*
