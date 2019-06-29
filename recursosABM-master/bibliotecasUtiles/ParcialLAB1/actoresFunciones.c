@@ -26,13 +26,13 @@ int inicializarActores(eActor listado[], int len)
 int mostrarListadoActores(eActor listado[], int len)
 {
     int i;
-    printf("%10s - %8s - %10s \n", "ID", "nombre y apellido", "Nacionalidad");
+    printf("%s\t - %s\t - %s\t \n", "ID", "nombre y apellido", "Nacionalidad");
 
     for(i = 0; i < len; i++)
     {
         if(listado[i].estado == 0)
         {
-            printf("%10d  %10s  %15s \n", listado[i].id, listado[i].nombreActor, listado[i].nacionalidad);
+            printf("%d\t  %s\t  %s\t \n", listado[i].id, listado[i].nombreActor, listado[i].nacionalidad);
 
         }
 

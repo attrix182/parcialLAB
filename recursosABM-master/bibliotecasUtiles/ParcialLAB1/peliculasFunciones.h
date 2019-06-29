@@ -121,4 +121,14 @@ int modificacionPelicula(ePelicula[], eActor[], int len, int id, int option);
   */
  int verificarCodigo(ePelicula listadoPeliculas[], int len, int codigoPelicula);
 
+
+ /** \brief Lista peliculas de un genero ingresado por consola
+  *
+  * \param listadoPeliculas[] ePelicula
+  * \param genero int
+  * \return int
+  *
+  */
+ int listarPeliculasGenero(ePelicula listadoPeliculas[],int genero);
+
 #endif // PELICULASFUNCIONES_H_INCLUDED

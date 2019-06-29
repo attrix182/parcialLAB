@@ -26,7 +26,7 @@ int getOptionShow()
 {
     int optionShow;
     printf("%s","                   INFORMES                 \n");
-    printf("%s %s \n", " 1. Todas las películas con género y actor. \n", "2.Películas cuya nacionalidad del actor sea EEUU.\n", "3.Por cada género el título de las películas que pertenecen a ese género");
+    printf("%s %s %s \n", " 1. Todas las peliculas con genero y actor. \n", "2.Peliculas cuya nacionalidad del actor sea EEUU.\n", "3.Por cada genero el titulo de las películas que pertenecen a ese genero");
     scanf("%d", &optionShow);
 
     return optionShow;

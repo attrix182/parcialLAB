@@ -54,10 +54,10 @@ int main()
                 printf("\n");
                 break;
             case 3:
-                listarActoresPorGenero(listadoPeliculas, listadoActores, len, "Accion");
-                listarActoresPorGenero(listadoPeliculas, listadoActores, len, "Terror");
-                listarActoresPorGenero(listadoPeliculas, listadoActores, len, "Comedia");
-            break
+                listarActoresPorGenero(listadoPeliculas, listadoActores, TAM, "Accion");
+                listarActoresPorGenero(listadoPeliculas, listadoActores, TAM, "Terror");
+                listarActoresPorGenero(listadoPeliculas, listadoActores, TAM, "Comedia");
+            break;
 
             }
             break;

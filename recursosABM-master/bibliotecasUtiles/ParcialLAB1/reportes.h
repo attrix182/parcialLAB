@@ -53,6 +53,6 @@ int listarPeliculasPorNacionalidadIngresa(ePelicula[], eActor[], int len,  char 
  * \return int
  *
  */
-int peliculasAgrupadasPorGenero(ePelicula[], eActor[], int len, char generoAlistar[21]);
+void peliculasAgrupadasPorGenero(ePelicula[], eActor[], int len, char generoAlistar[21]);
 
 #endif // REPORTES_H_INCLUDED

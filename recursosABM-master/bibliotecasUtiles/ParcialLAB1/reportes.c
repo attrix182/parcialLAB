@@ -97,7 +97,7 @@ int listarPeliculasPorNacionalidadIngresa(ePelicula listadoPel[], eActor listado
     return 0;
 }
 
-int peliculasAgrupadasPorGenero(ePelicula listadoPel[], eActor listadoAct[], int len, char generoAlistar[21])
+v peliculasAgrupadasPorGenero(ePelicula listadoPel[], eActor listadoAct[], int len, char generoAlistar[21])
 {
     int i;
     for(i = 0; i<len; i++)

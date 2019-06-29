@@ -301,3 +301,10 @@ int verificarCodigo(ePelicula listadoPeliculas[], int len, int codigoPelicula)
     return codigoPelicula;
 }
 
+int listarPeliculasGenero(ePelicula listadoPeliculas[],int genero)
+{
+
+
+    return 0;
+}
+
