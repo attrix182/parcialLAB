@@ -5,7 +5,7 @@
 int pedirOpcionMenu()
 {
     int opcion;
-    printf("            A B M                  \n\n");
+    printf("            |A B M   PELICULAS|          \n\n");
     printf(" 1.ALTAS  \n 2.LISTAR \n 3.MODIFICAR PELICULA\n 4.BAJA PELICULAS\n 5.Salir\n");
     scanf("%d", &opcion);
 
@@ -26,7 +26,7 @@ int getOptionShow()
 {
     int optionShow;
     printf("%s","                   INFORMES                 \n");
-    printf("%s %s %s \n", " 1. Todas las peliculas con genero y actor. \n", "2.Peliculas cuya nacionalidad del actor sea EEUU.\n", "3.Por cada genero el titulo de las películas que pertenecen a ese genero");
+    printf("%s %s %s %s %s %s \n", " 1.Todas las peliculas con genero y actor. \n", "2.Peliculas cuya nacionalidad del actor sea EEUU. \n","3.Peliculas nacionalidad del actor ingresada por consola. \n","4.Por cada genero el titulo de las peliculas que pertenecen a ese genero. \n", "5.Por cada genero cantidad de peliculas. \n", "6.Actores que mas peliculas protagonizaron. \n");
     scanf("%d", &optionShow);
 
     return optionShow;

@@ -128,9 +128,9 @@ int listarActoresPorNacionalidad(eActor listado[], int len)
             }
         }
 
-}
-        mostrarListadoActores(listado, len);
-        printf("\n");
-        return 0;
+    }
+    mostrarListadoActores(listado, len);
+    printf("\n");
+    return 0;
 }
 

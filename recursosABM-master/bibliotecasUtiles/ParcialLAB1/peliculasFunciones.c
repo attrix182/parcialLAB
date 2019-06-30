@@ -178,11 +178,10 @@ int harcodePeliculas(ePelicula listado[], int len)
     int codigoPelicula[6]= {999, 666, 555, 777, 111, 222};
     char titulo[6][51]= {"terminator ", "thor ", "it", "gladiador", "scary movie", "yo soy asi"};
     int fechaDeEstreno[6]= { 2020, 2019, 2018, 2018, 2012, 1990};
-    char genero[6][21]= { "Accion", "Accion", "Terror", "Romantica", "comedia", "otro"};
-    int idActor[6] = {1, 5, 4, 4};
-    //  int estado[4]= {0, 0, 0, 0};
+    char genero[6][21]= { "Accion", "Accion", "Terror", "Romantica", "Comedia", "Otro"};
+    int idActor[6] = {1, 5, 4, 4, 4, 4};
 
-    for(i=0; i<4; i++)
+    for(i=0; i<6; i++)
     {
 
         listado[i].id = id[i];
@@ -301,10 +300,5 @@ int verificarCodigo(ePelicula listadoPeliculas[], int len, int codigoPelicula)
     return codigoPelicula;
 }
 
-int listarPeliculasGenero(ePelicula listadoPeliculas[],int genero)
-{
 
-
-    return 0;
-}
 

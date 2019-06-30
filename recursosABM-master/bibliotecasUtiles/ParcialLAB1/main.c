@@ -21,8 +21,10 @@ int main()
 
     int opcion;
     int opcionMod;
-    int opcionMenu;
+    int opcionListar;
     char seguir = 's';
+    int opcionNacionalidad;
+    char nacionalidad[21];
     int idExiste;
     int id;
 
@@ -39,8 +41,8 @@ int main()
 
             break;
         case 2:
-            opcionMenu = getOptionShow();
-            switch(opcionMenu)
+            opcionListar = getOptionShow();
+            switch(opcionListar)
             {
 
             case 1:
@@ -54,11 +56,47 @@ int main()
                 printf("\n");
                 break;
             case 3:
-                listarActoresPorGenero(listadoPeliculas, listadoActores, TAM, "Accion");
-                listarActoresPorGenero(listadoPeliculas, listadoActores, TAM, "Terror");
-                listarActoresPorGenero(listadoPeliculas, listadoActores, TAM, "Comedia");
-            break;
+                opcionNacionalidad = pedirOpcionNacionalidad();
 
+                switch(opcionNacionalidad)
+                {
+                case 1:
+                    strcpy(nacionalidad, "EEUU");
+                    break;
+                case 2:
+                    strcpy(nacionalidad, "Argentina");
+                    break;
+                case 3:
+                    strcpy(nacionalidad, "Australia");
+                    break;
+                case 4:
+                    strcpy(nacionalidad, "Uruguay");
+                    break;
+                default:
+                    printf("opcion invlaida \n");
+                    break;
+                }
+
+                listarPeliculasPorNacionalidadIngresada(listadoPeliculas, listadoActores, TAM, nacionalidad);
+                break;
+            case 4:
+                listarActoresPorGenero(listadoPeliculas, listadoActores, TAM, "Accion");
+                printf("\n");
+                listarActoresPorGenero(listadoPeliculas, listadoActores, TAM, "Terror");
+                printf("\n");
+                listarActoresPorGenero(listadoPeliculas, listadoActores, TAM, "Comedia");
+                printf("\n");
+                listarActoresPorGenero(listadoPeliculas, listadoActores, TAM, "Romantica");
+                printf("\n");
+                listarActoresPorGenero(listadoPeliculas, listadoActores, TAM, "Otro");
+                printf("\n");
+                break;
+            case 5:
+                printf("5");
+                break;
+            case 6:
+                printf("6");
+                break;
             }
             break;
         case 3:
@@ -84,7 +122,6 @@ int main()
 
             }
             bajaPelicula(listadoPeliculas, TAM, id);
-
             break;
         case 5:
             seguir = 'n';

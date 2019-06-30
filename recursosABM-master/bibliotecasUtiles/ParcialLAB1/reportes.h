@@ -42,7 +42,7 @@ int listarPeliculasPorNacionalidad(ePelicula[], eActor[], int len,  char naciona
  * \return int
  *
  */
-int listarPeliculasPorNacionalidadIngresa(ePelicula[], eActor[], int len,  char nacionalidadAlistar[21]);
+int listarPeliculasPorNacionalidadIngresada(ePelicula[], eActor[], int len,  char nacionalidadAlistar[21]);
 
 
 /** \brief
