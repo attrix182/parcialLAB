@@ -27,7 +27,7 @@ int mostrarPeliculasConActores(ePelicula listadoPeliculas[], eActor listadoActor
 {
     int i;
     int posActor;
-    printf("%s\t - %s\t - %s\t - %s\t - %s\t - %s\t \n", "ID", "codigoPelicula", "titulo", "fechaDeEstreno", "genero", " Actor ");
+    printf("%s\t %s\t %s\t\t %s\t %s\t %s\t \n", "ID", "Codigo", "titulo", "Fecha", "Genero", "Actor");
 
 
     for(i = 0; i < len; i++)
@@ -77,37 +77,61 @@ int listarPeliculasPorNacionalidadIngresada(ePelicula listadoPel[], eActor lista
 {
     int i;
     int j;
+    int existen = 0;
 
-    printf("Peliculas que trabajaron actores de %s \n", nacionalidadAlistar);
+    //printf("Peliculas que trabajaron actores de %s \n", nacionalidadAlistar);
 
     for(i = 0; i<len; i++)
     {
+
         if(listadoAct[i].estado == 0 && stricmp(nacionalidadAlistar, listadoAct[i].nacionalidad)==0)
         {
             for(j = 0; j<len; j++)
             {
                 if(listadoPel[j].idActor == listadoAct[i].id)
-                    printf("%2s \n",listadoPel[j].titulo);
+                printf("%2s \n",listadoPel[j].titulo);
+
             }
+
+           existen = 1;
         }
-        else
-        {
-            printf("\n No hay peliculas con actores de esa nacionalidad\n\n");
-            break;
-        }
+        printf("\n");
     }
+
+    if(existen == 0)
+    {
+         printf("\n No hay peliculas con actores de esa nacionalidad\n\n");
+    }
+
 
 
     return 0;
 }
 
-void peliculasAgrupadasPorGenero(ePelicula listadoPel[], eActor listadoAct[], int len, char generoAlistar[21])
+void peliculasAgrupadasPorGenero(ePelicula listadoPel[], int len, char generoAlistar[21])
 {
+    printf(" %s %s  \n", "Peliculas del genero: ", generoAlistar);
     int i;
     for(i = 0; i<len; i++)
-        if(listadoAct[i].estado == 0 && stricmp(generoAlistar, listadoPel[i].genero)==0)
+        if(listadoPel[i].estado == 0 && stricmp(generoAlistar, listadoPel[i].genero)==0)
         {
             printf("%s  \n", listadoPel[i].titulo);
         }
+    printf("\n");
 
+}
+
+void cantidadpeliculasAgrupadasPorGenero(ePelicula listadoPel[], int len, char generoAlistar[21])
+{
+    int i;
+    int cont = 0;
+    for(i = 0; i<len; i++)
+    {
+        if(listadoPel[i].estado == 0 && stricmp(generoAlistar, listadoPel[i].genero)==0)
+        {
+            cont++;
+        }
+    }
+    printf("%s  %d %s %s \n", "Hay", cont, " peliculas de ", generoAlistar);
+    printf("\n");
 }

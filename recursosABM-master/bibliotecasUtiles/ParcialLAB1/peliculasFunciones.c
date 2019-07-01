@@ -125,15 +125,14 @@ int altaPeliculas(ePelicula listado[], eActor listadoActores[], int len)
 int mostrarListadoPeliculas(ePelicula listado[], int len)
 {
     int i;
-    printf("%10s - %10s - %8s - %10s - %10s \n", "ID", "codigoPelicula", "titulo", "fechaDeEstreno", "genero");
+    printf("%s\t %s\t %s\t %s\t %s\t \n", "ID", "codigoPelicula", "titulo", "fechaDeEstreno", "genero");
 
 
     for(i = 0; i < len; i++)
     {
         if(listado[i].estado == 0)
         {
-            printf("%10d  %10d  %12s %16d %15s \n", listado[i].id, listado[i].codigoPelicula, listado[i].titulo, listado[i].fechaDeEstreno, listado[i].genero);
-
+            printf("%d\t  %d\t  %s\t %d\t %s\t \n", listado[i].id, listado[i].codigoPelicula, listado[i].titulo, listado[i].fechaDeEstreno, listado[i].genero);
         }
 
 
@@ -174,14 +173,14 @@ int harcodePeliculas(ePelicula listado[], int len)
 {
     int i;
 
-    int id[6]= {1000, 1001, 1002, 1003, 1004, 1005};
-    int codigoPelicula[6]= {999, 666, 555, 777, 111, 222};
-    char titulo[6][51]= {"terminator ", "thor ", "it", "gladiador", "scary movie", "yo soy asi"};
-    int fechaDeEstreno[6]= { 2020, 2019, 2018, 2018, 2012, 1990};
-    char genero[6][21]= { "Accion", "Accion", "Terror", "Romantica", "Comedia", "Otro"};
-    int idActor[6] = {1, 5, 4, 4, 4, 4};
+    int id[8]= {1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007};
+    int codigoPelicula[8]= {999, 666, 555, 777, 111, 222, 101, 202};
+    char titulo[8][51]= {"terminator ", "   thor  ", "     it   ", "gladiador", "scary movie", "yo soy asi", "scary movie 2", "sexto sentido"};
+    int fechaDeEstreno[8]= { 2020, 2019, 2018, 2018, 2012, 1990, 2015, 1999};
+    char genero[8][21]= { "Accion", "Accion", "Terror", "Romantica", "Comedia", "Otro","Comedia", "Otro" };
+    int idActor[8] = {1, 5, 4, 4, 4, 4, 1, 1};
 
-    for(i=0; i<6; i++)
+    for(i=0; i<8; i++)
     {
 
         listado[i].id = id[i];

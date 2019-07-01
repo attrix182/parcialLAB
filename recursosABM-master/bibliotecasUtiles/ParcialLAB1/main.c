@@ -80,19 +80,19 @@ int main()
                 listarPeliculasPorNacionalidadIngresada(listadoPeliculas, listadoActores, TAM, nacionalidad);
                 break;
             case 4:
-                listarActoresPorGenero(listadoPeliculas, listadoActores, TAM, "Accion");
-                printf("\n");
-                listarActoresPorGenero(listadoPeliculas, listadoActores, TAM, "Terror");
-                printf("\n");
-                listarActoresPorGenero(listadoPeliculas, listadoActores, TAM, "Comedia");
-                printf("\n");
-                listarActoresPorGenero(listadoPeliculas, listadoActores, TAM, "Romantica");
-                printf("\n");
-                listarActoresPorGenero(listadoPeliculas, listadoActores, TAM, "Otro");
-                printf("\n");
+                peliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Accion");
+                peliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Terror");
+                peliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Comedia");
+                peliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Romantica");
+                peliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Otro");
                 break;
             case 5:
-                printf("5");
+                cantidadpeliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Accion");
+                cantidadpeliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Terror");
+                cantidadpeliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Comedia");
+                cantidadpeliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Romantica");
+                cantidadpeliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Otro");
+                printf("\n");
                 break;
             case 6:
                 printf("6");
