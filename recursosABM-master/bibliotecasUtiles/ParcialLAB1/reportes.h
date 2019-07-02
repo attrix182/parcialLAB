@@ -66,4 +66,43 @@ void peliculasAgrupadasPorGenero(ePelicula[], int len, char generoAlistar[21]);
  */
 void cantidadpeliculasAgrupadasPorGenero(ePelicula listadoPel[], int len, char generoAlistar[21]);
 
+/** \brief
+ *
+ * \param listadoPel[] ePelicula
+ * \param listadoAct[] eActor
+ * \param len int
+ * \return void
+ *
+ */
+void actoresMasParticipativos(ePelicula listadoPel[], eActor listadoAct[], int len);
+
+/** \brief
+ *
+ * \param listadoPel[] ePelicula
+ * \param len int
+ * \return void
+ *
+ */
+void generoConMasPeliculas(ePelicula listadoPel[], int len);
+
+/** \brief
+ *
+ * \param listadoPel[] ePelicula
+ * \param listadoAct[] eActor
+ * \param len int
+ * \return void
+ *
+ */
+void actoresQueNoTrabajaron(ePelicula listadoPel[], eActor listadoAct[], int len);
+
+/** \brief
+ *
+ * \param listadoPel[] ePelicula
+ * \param len int
+ * \param idAcontar int
+ * \return void
+ *
+ */
+int partActores(ePelicula listadoPel[], int len, int idAcontar);
+
 #endif // REPORTES_H_INCLUDED

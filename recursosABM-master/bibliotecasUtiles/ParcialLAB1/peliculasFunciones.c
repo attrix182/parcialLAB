@@ -61,7 +61,7 @@ int altaPeliculas(ePelicula listado[], eActor listadoActores[], int len)
 
     }
 
-    fechaDeEstreno = getInt("Ingrese Año de estreno \n");
+    fechaDeEstreno = getInt("Ingrese Anio de estreno \n");
     while(fechaDeEstreno < 1984 || fechaDeEstreno > 2025)
     {
         fechaDeEstreno = getInt("Reingrese una fecha valida 1984/2025 a\n");

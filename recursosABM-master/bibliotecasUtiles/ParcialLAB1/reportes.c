@@ -79,7 +79,7 @@ int listarPeliculasPorNacionalidadIngresada(ePelicula listadoPel[], eActor lista
     int j;
     int existen = 0;
 
-    //printf("Peliculas que trabajaron actores de %s \n", nacionalidadAlistar);
+    printf("Peliculas que trabajaron actores de %s :\n", nacionalidadAlistar);
 
     for(i = 0; i<len; i++)
     {
@@ -89,18 +89,17 @@ int listarPeliculasPorNacionalidadIngresada(ePelicula listadoPel[], eActor lista
             for(j = 0; j<len; j++)
             {
                 if(listadoPel[j].idActor == listadoAct[i].id)
-                printf("%2s \n",listadoPel[j].titulo);
+                    printf("%s \n",listadoPel[j].titulo);
 
             }
 
-           existen = 1;
+            existen = 1;
         }
-        printf("\n");
     }
 
     if(existen == 0)
     {
-         printf("\n No hay peliculas con actores de esa nacionalidad\n\n");
+        printf("\n No hay peliculas con actores de esa nacionalidad\n\n");
     }
 
 
@@ -134,4 +133,59 @@ void cantidadpeliculasAgrupadasPorGenero(ePelicula listadoPel[], int len, char g
     }
     printf("%s  %d %s %s \n", "Hay", cont, " peliculas de ", generoAlistar);
     printf("\n");
+}
+
+void actoresMasParticipativos(ePelicula listadoPel[], eActor listadoAct[], int len)
+{
+    int i;
+    int actor;
+    int cantidad;
+    int auxCantidad;
+
+
+    for(i=0; i<len; i++)
+    {
+
+       auxCantidad = partActores(listadoPel, len, i+1);
+
+       if(i == 0 || auxCantidad > cantidad)
+       {
+            cantidad = auxCantidad;
+            actor = i;
+
+       }
+
+    }
+
+    printf("%s %s\n","El actor con mas participaciones es:", listadoAct[actor].nombreActor);
+}
+
+void generoConMasPeliculas(ePelicula listadoPel[], int len)
+{
+
+
+
+}
+
+void actoresQueNoTrabajaron(ePelicula listadoPel[], eActor listadoAct[], int len)
+{
+
+}
+
+int partActores(ePelicula listadoPel[], int len, int idAcontar)
+{
+    int i;
+    int participaciones = 0;
+
+    for(i = 0; i<len; i++)
+    {
+        if(listadoPel[i].estado == 0 && listadoPel[i].idActor == idAcontar)
+        {
+            participaciones++;
+
+        }
+    }
+
+    return participaciones;
+
 }

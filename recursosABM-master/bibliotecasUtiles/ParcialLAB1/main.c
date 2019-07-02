@@ -27,6 +27,7 @@ int main()
     char nacionalidad[21];
     int idExiste;
     int id;
+  //  int part;
 
 
     do
@@ -73,7 +74,7 @@ int main()
                     strcpy(nacionalidad, "Uruguay");
                     break;
                 default:
-                    printf("opcion invlaida \n");
+                    printf("opcion invalida \n");
                     break;
                 }
 
@@ -95,7 +96,11 @@ int main()
                 printf("\n");
                 break;
             case 6:
-                printf("6");
+                actoresMasParticipativos(listadoPeliculas, listadoActores, TAM);
+                break;
+            case 7:
+                break;
+            case 8:
                 break;
             }
             break;
