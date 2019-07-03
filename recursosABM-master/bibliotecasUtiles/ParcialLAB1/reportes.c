@@ -90,7 +90,10 @@ int listarPeliculasPorNacionalidadIngresada(ePelicula listadoPel[], eActor lista
             for(j = 0; j<len; j++)
             {
                 if(listadoPel[j].idActor == listadoAct[i].id)
-                    printf("%s \n",listadoPel[j].titulo);
+                {
+                     printf("%s \n",listadoPel[j].titulo);
+                }
+
 
             }
 
