@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1562107940 source:e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\actoresfunciones.c
+1562179011 source:e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\actoresfunciones.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -19,7 +19,7 @@
 	"actoresFunciones.h"
 	"peliculasFunciones.h"
 
-1562108633 source:e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\menu.c
+1562180128 source:e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\menu.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
@@ -29,7 +29,7 @@
 
 1558017641 e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\funcionesget.h
 
-1562109177 source:e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\peliculasfunciones.c
+1562180335 source:e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\peliculasfunciones.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -39,14 +39,14 @@
 	"funcionesGet.h"
 	"menu.h"
 
-1562108030 source:e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\reportes.c
+1562178115 source:e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\reportes.c
 	"actoresFunciones.h"
 	"peliculasFunciones.h"
 	"string.h"
 	<stdio.h>
 	<stdlib.h>
 
-1562107243 source:e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\main.c
+1562179846 source:e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"actoresFunciones.h"

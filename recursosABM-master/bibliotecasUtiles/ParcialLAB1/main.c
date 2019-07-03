@@ -117,7 +117,7 @@ int main()
             }
             break;
         case 3:
-
+            mostrarPeliculasConActores(listadoPeliculas, listadoActores, TAM);
             id = getInt("Ingrese ID de Pelicula a modificar \n");
             idExiste = buscarPeliPorID(listadoPeliculas, TAM, id);
             while(idExiste == -1)
@@ -130,6 +130,7 @@ int main()
             modificacionPelicula(listadoPeliculas, listadoActores, TAM, id, opcionMod);
             break;
         case 4:
+            mostrarPeliculasConActores(listadoPeliculas, listadoActores, TAM);
             id = getInt("Ingrese ID de pelicula a remover\n");
             idExiste = buscarPeliPorID(listadoPeliculas, TAM, id);
             while(idExiste == -1)

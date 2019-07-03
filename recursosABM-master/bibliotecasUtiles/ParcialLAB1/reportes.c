@@ -14,10 +14,10 @@ int listarActoresPorGenero(ePelicula listadoPel[], eActor listadoAct[], int len,
         if(listadoPel[i].estado == 0 && stricmp(generoAlistar, listadoPel[i].genero)==0)
         {
             posActorDeGenero = buscarActorPorID(listadoAct, len, listadoPel[i].idActor);
+
             printf("%10s \n",listadoAct[posActorDeGenero].nombreActor);
 
         }
-
 
     }
     return 0;

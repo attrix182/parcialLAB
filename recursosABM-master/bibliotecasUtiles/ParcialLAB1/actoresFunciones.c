@@ -43,6 +43,7 @@ int mostrarListadoActores(eActor listado[], int len)
 int buscarActorPorID(eActor listado[], int len,int id)
 {
     int i;
+
     for(i = 0; i<len; i++)
     {
         if(listado[i].id == id)

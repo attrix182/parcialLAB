@@ -58,14 +58,14 @@ int altaPeliculas(ePelicula listado[], eActor listadoActores[], int len)
 
     while(esNumerico(titulo)==1)
     {
-        getString(" Ingrese nuevo titulo, debe ser texto \n", titulo);
+        getString("Ingrese nuevo titulo, debe ser texto \n", titulo);
 
     }
 
     fechaDeEstreno = getInt("Ingrese Anio de estreno \n");
     while(fechaDeEstreno < 1984 || fechaDeEstreno > 2025)
     {
-        fechaDeEstreno = getInt("Reingrese una fecha valida 1984/2025 a\n");
+        fechaDeEstreno = getInt("Reingrese una fecha valida 1984/2025 \n");
     }
 
     do
@@ -90,7 +90,6 @@ int altaPeliculas(ePelicula listado[], eActor listadoActores[], int len)
             strcpy(genero, "romantica");
             break;
         default:
-
             printf("Erroneo. Genero inexistente");
             break;
         }
@@ -99,10 +98,11 @@ int altaPeliculas(ePelicula listado[], eActor listadoActores[], int len)
     mostrarListadoActores(listadoActores, len);
     idActor = getInt("id de actor principal\n");
     idExiste = buscarActorPorID(listadoActores, len, idActor);
+
     while(idExiste == -1)
     {
         idActor = getInt("Reingrese una ID de Actor valida\n");
-        idExiste = buscarActorPorID(listadoActores, len, idActor);;
+        idExiste = buscarActorPorID(listadoActores, len, idActor);
     }
 
     int i;
@@ -240,11 +240,17 @@ int modificacionPelicula(ePelicula listadoPeliculas[], eActor listadoActores[], 
         strcpy(listadoPeliculas[posAeditar].titulo, titulo);
         break;
     case 2:
-        fechaDeEstreno = getInt("Ingrese Nueva Fecha de estreno \n");
+        fechaDeEstreno = getInt("Ingrese Nueva Fecha de estreno 1984/2025 \n");
+        while(fechaDeEstreno < 1984 || fechaDeEstreno > 2025)
+        {
+            fechaDeEstreno = getInt("Reingrese una fecha valida 1984/2025 \n");
+        }
+
         listadoPeliculas[posAeditar].fechaDeEstreno = fechaDeEstreno;
         break;
     case 3:
-        idActor = getInt("id de actor principal\n");
+        mostrarListadoActores(listadoActores, len);
+        idActor = getInt("ID del nuevo actor principal\n");
         idExiste = buscarActorPorID(listadoActores, len, idActor);
         while(idExiste == -1)
         {
