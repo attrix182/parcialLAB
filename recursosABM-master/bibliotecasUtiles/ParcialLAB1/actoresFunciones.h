@@ -57,7 +57,6 @@ int bajaActor(eActor[], int len, int id);
  * \return int Return (-1) if Error [Invalid length or NULL pointer or without
 free space] - (0) if Ok
  **/
-
 int harcodeActores(eActor[], int len);
 
 

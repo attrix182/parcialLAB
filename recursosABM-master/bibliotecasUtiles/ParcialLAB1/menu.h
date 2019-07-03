@@ -30,4 +30,11 @@ int getOptionShow();
  */
 int pedirOpcionNacionalidad();
 
+
+/** \brief
+ *
+ * \return int
+ *
+ */
+int pedirOrden();
 #endif // MENU_H_INCLUDED

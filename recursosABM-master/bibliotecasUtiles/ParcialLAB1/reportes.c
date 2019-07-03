@@ -27,7 +27,7 @@ int mostrarPeliculasConActores(ePelicula listadoPeliculas[], eActor listadoActor
 {
     int i;
     int posActor;
-    printf("%s\t %s\t %s\t\t %s\t %s\t %s\t \n", "ID", "Codigo", "titulo", "Fecha", "Genero", "Actor");
+    printf("%s\t %s\t %15s  %s\t\t %s\t\t %15s \n", "ID", "Codigo", "titulo", "Fecha", "Genero", "Actor");
 
 
     for(i = 0; i < len; i++)
@@ -38,7 +38,7 @@ int mostrarPeliculasConActores(ePelicula listadoPeliculas[], eActor listadoActor
             posActor = buscarActorPorID(listadoActores, len, listadoPeliculas[i].idActor);
 
 
-            printf("%d\t %d\t %s\t %d\t %s\t %s\t \n", listadoPeliculas[i].id, listadoPeliculas[i].codigoPelicula, listadoPeliculas[i].titulo, listadoPeliculas[i].fechaDeEstreno, listadoPeliculas[i].genero, listadoActores[posActor].nombreActor);
+            printf("%d\t %d\t %15s %d\t\t %s %30s\t \n", listadoPeliculas[i].id, listadoPeliculas[i].codigoPelicula, listadoPeliculas[i].titulo, listadoPeliculas[i].fechaDeEstreno, listadoPeliculas[i].genero, listadoActores[posActor].nombreActor);
 
         }
 
@@ -135,44 +135,9 @@ void cantidadpeliculasAgrupadasPorGenero(ePelicula listadoPel[], int len, char g
     printf("\n");
 }
 
-void actoresMasParticipativos(ePelicula listadoPel[], eActor listadoAct[], int len)
-{
-    int i;
-    int actor;
-    int cantidad;
-    int auxCantidad;
 
 
-    for(i=0; i<len; i++)
-    {
-
-       auxCantidad = partActores(listadoPel, len, i+1);
-
-       if(i == 0 || auxCantidad > cantidad)
-       {
-            cantidad = auxCantidad;
-            actor = i;
-
-       }
-
-    }
-
-    printf("%s %s\n","El actor con mas participaciones es:", listadoAct[actor].nombreActor);
-}
-
-void generoConMasPeliculas(ePelicula listadoPel[], int len)
-{
-
-
-
-}
-
-void actoresQueNoTrabajaron(ePelicula listadoPel[], eActor listadoAct[], int len)
-{
-
-}
-
-int partActores(ePelicula listadoPel[], int len, int idAcontar)
+int participaciones(ePelicula listadoPel[], int len, int idAcontar)
 {
     int i;
     int participaciones = 0;
@@ -184,8 +149,118 @@ int partActores(ePelicula listadoPel[], int len, int idAcontar)
             participaciones++;
 
         }
+
     }
 
     return participaciones;
 
 }
+
+void actoresMasParticipativos(ePelicula listadoPel[], eActor listadoAct[], int len)
+{
+    int i;
+    int j;
+    int cantidad;
+    int auxCantidad;
+
+
+    for(i=0; i<len; i++)
+    {
+        auxCantidad = participaciones(listadoPel, len, listadoAct[i].id);
+
+
+        if(i == 0 || auxCantidad > cantidad)
+        {
+            cantidad = auxCantidad;
+        }
+    }
+
+    printf("%s \n","Actores con mas participaciones:");
+
+    for(j = 0; j<len; j++)
+    {
+        auxCantidad = participaciones(listadoPel, len, listadoAct[j].id);
+
+        if(listadoAct[j].estado == 0 && auxCantidad == cantidad)
+        {
+            printf("%s \n",listadoAct[j].nombreActor);
+        }
+    }
+
+
+}
+
+
+int cantidadPeliculasPorGenero(ePelicula listadoPel[], int len, char generoAcontar[21])
+{
+    int i;
+    int cant = 0;
+    for(i = 0; i<len; i++)
+    {
+        if(listadoPel[i].estado == 0 && stricmp(generoAcontar, listadoPel[i].genero)==0)
+        {
+            cant++;
+        }
+    }
+
+    return cant;
+}
+
+void generoConMenosPeliculas(ePelicula listadoPel[], int len)
+{
+    int a[5];
+    char b[5][21] = { "Accion", "Terror", "Romantica", "Comedia", "Otro" };
+    int i,j;
+    int cantidad;
+
+    for(i=0; i<5; i++)
+    {
+        a[i] = cantidadPeliculasPorGenero(listadoPel, len, b[i]);
+    }
+
+    for(i = 0; i<5; i++)
+    {
+        if(i == 0|| cantidad > a[i])
+        {
+            cantidad = a[i];
+        }
+    }
+
+    printf("%s \n", "Generos con menos peliculas: ");
+
+    for(j = 0; j<5; j++)
+
+    {
+        if(a[j] == cantidad)
+        {
+            printf("%s \n", b[j]);
+        }
+    }
+
+
+
+
+}
+
+void actoresQueNoTrabajaron(ePelicula listadoPel[], eActor listadoAct[], int len)
+{
+    int i;
+    int auxCantidad = 0;
+
+    for(i=0; i<len; i++)
+    {
+
+        auxCantidad = participaciones(listadoPel, len, listadoAct[i].id);
+
+        if(listadoAct[i].estado == 0 && auxCantidad == 0)
+        {
+            printf("%s %s \n","Actor sin participacion:", listadoAct[i].nombreActor);
+        }
+
+    }
+
+
+
+}
+
+

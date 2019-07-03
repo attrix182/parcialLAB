@@ -27,7 +27,6 @@ int main()
     char nacionalidad[21];
     int idExiste;
     int id;
-  //  int part;
 
 
     do
@@ -45,18 +44,29 @@ int main()
             opcionListar = getOptionShow();
             switch(opcionListar)
             {
-
             case 1:
+                mostrarListadoPeliculas(listadoPeliculas, TAM);
+                break;
+            case 2:
+                mostrarPeliculasConActores(listadoPeliculas, listadoActores, TAM);
+                break;
+            case 3:
+                listarPeliculasPorFecha(listadoPeliculas, TAM);
+                break;
+            case 4:
+                listarActoresPorNacionalidad(listadoActores, TAM);
+                break;
+            case 5:
                 printf("   Listado de Peliculas CON Actores Y Genero \n");
                 mostrarPeliculasConActores(listadoPeliculas, listadoActores, TAM);
                 printf("\n");
                 break;
 
-            case 2:
+            case 6:
                 listarPeliculasPorNacionalidad(listadoPeliculas, listadoActores, TAM, "EEUU");
                 printf("\n");
                 break;
-            case 3:
+            case 7:
                 opcionNacionalidad = pedirOpcionNacionalidad();
 
                 switch(opcionNacionalidad)
@@ -80,14 +90,14 @@ int main()
 
                 listarPeliculasPorNacionalidadIngresada(listadoPeliculas, listadoActores, TAM, nacionalidad);
                 break;
-            case 4:
+            case 8:
                 peliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Accion");
                 peliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Terror");
                 peliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Comedia");
                 peliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Romantica");
                 peliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Otro");
                 break;
-            case 5:
+            case 9:
                 cantidadpeliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Accion");
                 cantidadpeliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Terror");
                 cantidadpeliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Comedia");
@@ -95,12 +105,14 @@ int main()
                 cantidadpeliculasAgrupadasPorGenero(listadoPeliculas, TAM, "Otro");
                 printf("\n");
                 break;
-            case 6:
+            case 10:
                 actoresMasParticipativos(listadoPeliculas, listadoActores, TAM);
                 break;
-            case 7:
+            case 11:
+                generoConMenosPeliculas(listadoPeliculas, TAM);
                 break;
-            case 8:
+            case 12:
+                actoresQueNoTrabajaron(listadoPeliculas, listadoActores, TAM);
                 break;
             }
             break;
