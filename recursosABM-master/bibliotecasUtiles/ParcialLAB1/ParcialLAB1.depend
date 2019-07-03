@@ -58,3 +58,62 @@
 
 1562099438 e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\reportes.h
 
+1562179011 source:e:\usuarios\escritorio\clona3 parcial1\parciallab1\actoresfunciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"actoresFunciones.h"
+	"peliculasFunciones.h"
+
+1562031696 e:\usuarios\escritorio\clona3 parcial1\parciallab1\actoresfunciones.h
+
+1561866211 e:\usuarios\escritorio\clona3 parcial1\parciallab1\peliculasfunciones.h
+
+1558017641 source:e:\usuarios\escritorio\clona3 parcial1\parciallab1\funcionesget.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"actoresFunciones.h"
+	"peliculasFunciones.h"
+
+1562179846 source:e:\usuarios\escritorio\clona3 parcial1\parciallab1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"actoresFunciones.h"
+	"peliculasFunciones.h"
+	"menu.h"
+	"funcionesGet.h"
+	"string.h"
+	"reportes.h"
+
+1562108641 e:\usuarios\escritorio\clona3 parcial1\parciallab1\menu.h
+
+1558017641 e:\usuarios\escritorio\clona3 parcial1\parciallab1\funcionesget.h
+
+1562099438 e:\usuarios\escritorio\clona3 parcial1\parciallab1\reportes.h
+
+1562180128 source:e:\usuarios\escritorio\clona3 parcial1\parciallab1\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"funcionesGet.h"
+
+1562180335 source:e:\usuarios\escritorio\clona3 parcial1\parciallab1\peliculasfunciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"actoresFunciones.h"
+	"peliculasFunciones.h"
+	"funcionesGet.h"
+	"menu.h"
+
+1562188343 source:e:\usuarios\escritorio\clona3 parcial1\parciallab1\reportes.c
+	"actoresFunciones.h"
+	"peliculasFunciones.h"
+	"string.h"
+	<stdio.h>
+	<stdlib.h>
+

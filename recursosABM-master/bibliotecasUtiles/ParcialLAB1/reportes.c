@@ -54,7 +54,7 @@ int listarPeliculasPorNacionalidad(ePelicula listadoPel[], eActor listadoAct[], 
     int i;
     int j;
 
-    printf("Peliculas que trabajaron actores de de %s \n", nacionalidadAlistar);
+    printf("Peliculas que trabajaron actores de %s \n", nacionalidadAlistar);
 
     for(i = 0; i<len; i++)
     {
@@ -70,6 +70,7 @@ int listarPeliculasPorNacionalidad(ePelicula listadoPel[], eActor listadoAct[], 
         }
 
     }
+
     return 0;
 }
 
@@ -247,6 +248,8 @@ void actoresQueNoTrabajaron(ePelicula listadoPel[], eActor listadoAct[], int len
     int i;
     int auxCantidad = 0;
 
+    printf("%s \n","Actores sin participacion: ");
+
     for(i=0; i<len; i++)
     {
 
@@ -254,7 +257,7 @@ void actoresQueNoTrabajaron(ePelicula listadoPel[], eActor listadoAct[], int len
 
         if(listadoAct[i].estado == 0 && auxCantidad == 0)
         {
-            printf("%s %s \n","Actor sin participacion:", listadoAct[i].nombreActor);
+            printf("%s \n", listadoAct[i].nombreActor);
         }
 
     }
