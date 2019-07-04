@@ -19,7 +19,7 @@
 	"actoresFunciones.h"
 	"peliculasFunciones.h"
 
-1562192351 source:e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\menu.c
+1562204490 source:e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\menu.c
 	<stdio.h>
 	<stdlib.h>
 	"menu.h"
@@ -29,7 +29,7 @@
 
 1558017641 e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\funcionesget.h
 
-1562180335 source:e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\peliculasfunciones.c
+1562204252 source:e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\peliculasfunciones.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -46,7 +46,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1562179846 source:e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\main.c
+1562204339 source:e:\usuarios\escritorio\parciallab-master\recursosabm-master\bibliotecasutiles\parciallab1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"actoresFunciones.h"

@@ -94,7 +94,8 @@ int altaPeliculas(ePelicula listado[], eActor listadoActores[], int len)
             break;
         }
     }
-    while(generoNumero > 5);
+    while(generoNumero > 5 || generoNumero < 1);
+
     mostrarListadoActores(listadoActores, len);
     idActor = getInt("id de actor principal\n");
     idExiste = buscarActorPorID(listadoActores, len, idActor);

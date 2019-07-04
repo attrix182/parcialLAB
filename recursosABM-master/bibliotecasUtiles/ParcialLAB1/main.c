@@ -67,27 +67,30 @@ int main()
                 printf("\n");
                 break;
             case 7:
-                opcionNacionalidad = pedirOpcionNacionalidad();
-
-                switch(opcionNacionalidad)
+                do
                 {
-                case 1:
-                    strcpy(nacionalidad, "EEUU");
-                    break;
-                case 2:
-                    strcpy(nacionalidad, "Argentina");
-                    break;
-                case 3:
-                    strcpy(nacionalidad, "Australia");
-                    break;
-                case 4:
-                    strcpy(nacionalidad, "Uruguay");
-                    break;
-                default:
-                    printf("opcion invalida \n");
-                    break;
-                }
+                    opcionNacionalidad = pedirOpcionNacionalidad();
 
+                    switch(opcionNacionalidad)
+                    {
+                    case 1:
+                        strcpy(nacionalidad, "EEUU");
+                        break;
+                    case 2:
+                        strcpy(nacionalidad, "Argentina");
+                        break;
+                    case 3:
+                        strcpy(nacionalidad, "Australia");
+                        break;
+                    case 4:
+                        strcpy(nacionalidad, "Uruguay");
+                        break;
+                    default:
+                        printf("opcion invalida \n");
+                        break;
+                    }
+                }
+                while(opcionNacionalidad > 4 || opcionNacionalidad < 1);
                 listarPeliculasPorNacionalidadIngresada(listadoPeliculas, listadoActores, TAM, nacionalidad);
                 break;
             case 8:
@@ -114,7 +117,11 @@ int main()
             case 12:
                 actoresQueNoTrabajaron(listadoPeliculas, listadoActores, TAM);
                 break;
+            default:
+                printf("%s", "Opcion Invalida\n");
+                break;
             }
+
             break;
         case 3:
             mostrarPeliculasConActores(listadoPeliculas, listadoActores, TAM);

@@ -30,8 +30,7 @@ int getOptionShow()
     int optionShow;
     printf("%s","                   INFORMES                 \n");
     printf("%s %s %s %s %s %s %s %s %s %s %s %s \n"," 1.Listar los datos de Peliculas sin actores\n", "2.Listar los datos de Peliculas con actores\n", "3.Peliculas ordenadas por anio de estreno\n", "4.Actores ordenados por pais de origen\n", "5.Todas las peliculas con genero y actor. \n", "6.Peliculas cuya nacionalidad del actor sea EEUU. \n","7.Peliculas nacionalidad del actor ingresada por consola. \n","8.Por cada genero el titulo de las peliculas que pertenecen a ese genero. \n", "9.Por cada genero cantidad de peliculas. \n", "10.Actores que mas peliculas protagonizaron. \n","11.Genero/s con menos peliculas.\n", "12.Actor/es que no trabajaron en ninguna pelicula.\n");
-    scanf("%d", &optionShow);
-
+    optionShow = getInt("");
 
     return optionShow;
 }
@@ -40,8 +39,7 @@ int pedirOpcionNacionalidad()
 {
     int optionShow;
     printf("%s","                   Ingrese nacionaliad a listar                 \n");
-    printf( "%s \n", " 1.EEUU \n 2.Argentina \n 3.Australia\n 4.Uruguay\n");
-    scanf("%d", &optionShow);
+    optionShow = getInt("1.EEUU \n 2.Argentina \n 3.Australia\n 4.Uruguay\n");
 
     return optionShow;
 }
