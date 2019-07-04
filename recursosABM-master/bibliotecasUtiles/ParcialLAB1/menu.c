@@ -6,7 +6,7 @@ int pedirOpcionMenu()
 {
     int opcion;
     printf("            |A B M   PELICULAS|          \n\n");
-    opcion = getInt(" 1.ALTAS  \n 2.LISTAR \n 3.MODIFICAR PELICULA\n 4.BAJA PELICULAS\n 5.Salir\n");
+    opcion = getInt(" 1.ALTAS  \n 2.LISTAR \n 3.MODIFICAR PELICULA\n 4.BAJA PELICULAS\n 5.ALTA DE ACTORES\n 6.MODIFICAR ACTORES\n 7.BAJA ACTORES\n 8.Salir\n");
     return opcion;
 
 }
@@ -29,7 +29,7 @@ int getOptionShow()
 {
     int optionShow;
     printf("%s","                   INFORMES                 \n");
-    printf("%s %s %s %s %s %s %s %s %s %s %s %s \n"," 1.Listar los datos de Peliculas sin actores\n", "2.Listar los datos de Peliculas con actores\n", "3.Peliculas ordenadas por anio de estreno\n", "4.Actores ordenados por pais de origen\n", "5.Todas las peliculas con genero y actor. \n", "6.Peliculas cuya nacionalidad del actor sea EEUU. \n","7.Peliculas nacionalidad del actor ingresada por consola. \n","8.Por cada genero el titulo de las peliculas que pertenecen a ese genero. \n", "9.Por cada genero cantidad de peliculas. \n", "10.Actores que mas peliculas protagonizaron. \n","11.Genero/s con menos peliculas.\n", "12.Actor/es que no trabajaron en ninguna pelicula.\n");
+    printf("%s %s %s %s %s %s %s %s %s %s %s %s %s %s %s \n"," 1.Listar los datos de Peliculas sin actores\n", "2.Listar los datos de Peliculas con actores\n", "3.Peliculas ordenadas por anio de estreno\n", "4.Actores ordenados por pais de origen\n", "5.Todas las peliculas con genero y actor. \n", "6.Peliculas cuya nacionalidad del actor sea EEUU. \n","7.Peliculas nacionalidad del actor ingresada por consola. \n","8.Por cada genero el titulo de las peliculas que pertenecen a ese genero. \n", "9.Por cada genero cantidad de peliculas. \n", "10.Actores que mas peliculas protagonizaron. \n","11.Genero/s con menos peliculas.\n", "12.Actor/es que no trabajaron en ninguna pelicula.\n", "13.Actores ordenados por edad descendente\n", "14.Actor/es de mas edad\n", "15.Listar ACTORES por pais ingresado\n" );
     optionShow = getInt("");
 
     return optionShow;
@@ -53,6 +53,22 @@ int pedirOrden()
     while(opcion != 1 && opcion != 2)
     {
         opcion = getInt("ERROR. 1.Ascendente \n 2.Descendente \n ");
+    }
+
+    return opcion;
+}
+
+
+int pedirOpcionModificacionActor()
+{
+    int opcion;
+    printf("%s","             MODIFICACION ACTORES           \n");
+    printf("%10s - %10s - %10s \n", "1.Nombre", "2.Nacionalidad", "3.Edad");
+    opcion = getInt("\nQue desea modificar?\n");
+
+    while(opcion != 1 && opcion != 2 && opcion != 3)
+    {
+        opcion = getInt("ERROR. 1.Nombre 2.Nacionalidad 3.Edad\n");
     }
 
     return opcion;

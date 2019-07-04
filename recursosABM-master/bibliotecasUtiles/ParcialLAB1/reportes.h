@@ -138,4 +138,33 @@ void actoresAntesDeFecha(ePelicula listadoPel[], eActor listadoAct[], int len, i
  *
  */
 void peliculasAgrupadasPorActor(ePelicula listadoPel[], eActor listadoAct[], int len, int idDeActor);
+
+
+/** \brief
+ *
+ * \param listadoAct[] eActor
+ * \param len int
+ * \return void
+ *
+ */
+void actoresViejoAjoven(eActor listadoAct[], int len);
+
+/** \brief
+ *
+ * \param listadoAct[] eActor
+ * \param len int
+ * \return void
+ *
+ */
+void actoresMayoresDeEdad(eActor listadoAct[], int len);
+
+/** \brief
+ *
+ * \param listado[] eActor
+ * \param len int
+ * \param nacionalidad[21] char
+ * \return int
+ *
+ */
+int listarActoresPorNacionalidadIngresada(eActor listado[], int len , char nacionalidad[21]);
 #endif // REPORTES_H_INCLUDED

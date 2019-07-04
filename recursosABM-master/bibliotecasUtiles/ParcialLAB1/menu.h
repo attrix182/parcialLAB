@@ -37,4 +37,12 @@ int pedirOpcionNacionalidad();
  *
  */
 int pedirOrden();
+
+
+/** \brief
+ *
+ * \return int
+ *
+ */
+int pedirOpcionModificacionActor();
 #endif // MENU_H_INCLUDED

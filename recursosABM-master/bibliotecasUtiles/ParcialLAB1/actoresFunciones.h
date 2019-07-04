@@ -6,6 +6,7 @@ typedef struct
     int id;
     char nombreActor[51];
     char nacionalidad[51];
+    int edad;
     int estado;
 } eActor;
 
@@ -46,7 +47,8 @@ int buscarActorPorID(eActor[], int len,int idPropietario);
  * \return int Return (-1) if Error [Invalid length or NULL pointer or if can't find a employee] - (0) if Ok
  *
  */
-int bajaActor(eActor[], int len, int id);
+
+int bajaPropietario(eActor listado[], int len, char nac[21]);
 
 /** \brief modify a existing list of employees the values received as parameters in the first empty position
  * \param list employee*
@@ -79,15 +81,24 @@ int buscarLibreActores(eActor[], int len);
  */
 int listarActoresPorNacionalidad(eActor[], int len);
 
+
 /** \brief
  *
- * \param listadoPel[] ePelicula
  * \param listadoAct[] eActor
  * \param len
- * \param generoAlistar
  * \return int
  *
  */
+int altaActor(eActor listadoAct[], int len);
 
 
+/** \brief
+ *
+ * \param listadoAct[] eActor
+ * \param len int
+ * \param id int
+ * \return int
+ *
+ */
+int modificarActores(eActor listadoAct[], int len, int id);
 #endif // ACTORESFUNCIONES_H_INCLUDED

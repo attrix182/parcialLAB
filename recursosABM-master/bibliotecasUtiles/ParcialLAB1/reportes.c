@@ -308,7 +308,7 @@ void peliculasAgrupadasPorActor(ePelicula listadoPel[], eActor listadoAct[], int
             printf("%s  \n", listadoPel[i].titulo);
             existen = 1;
         }
- }
+    }
     if(existen == 0)
     {
         printf("\n No hay peliculas con ese actor\n");
@@ -319,4 +319,68 @@ void peliculasAgrupadasPorActor(ePelicula listadoPel[], eActor listadoAct[], int
 }
 
 
+void actoresViejoAjoven(eActor listadoAct[], int len)
+{
+    int i, j;
+    eActor aux;
+    for(i=0; i<len; i++)
+    {
+        for(j=i+1; j<len; j++)
+        {
+            if(listadoAct[i].edad < listadoAct[j].edad)
+            {
+                aux = listadoAct[i];
+                listadoAct[i] = listadoAct[j];
+                listadoAct[j] = aux;
+            }
+        }
+    }
+    mostrarListadoActores(listadoAct, len);
+}
+
+void actoresMayoresDeEdad(eActor listadoAct[], int len)
+{
+
+    int i;
+    int edadMax;
+
+    printf("%s \n","Actores con mayoria de edad:");
+    for(i=0; i<len; i++)
+    {
+        if(i == 0 || listadoAct[i].edad >= 18)
+        {
+            edadMax = i;
+
+            if(listadoAct[i].estado == 0)
+            {
+                printf("%s \n",listadoAct[edadMax].nombreActor);
+            }
+
+        }
+    }
+}
+
+int listarActoresPorNacionalidadIngresada(eActor listado[], int len, char nacionalidad[21])
+{
+    int i;
+    int existen= 0 ;
+
+    for(i=0; i<len-1; i++)
+    {
+        if(stricmp(listado[i].nacionalidad, nacionalidad)==0)
+        {
+            printf("%s  \n", listado[i].nombreActor);
+            existen = 1;
+        }
+    }
+
+
+    if(existen == 0)
+    {
+        printf("\n No hay actores de ese pais\n");
+    }
+
+    return 0;
+
+}
 
