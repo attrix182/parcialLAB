@@ -9,6 +9,7 @@ int listarActoresPorGenero(ePelicula listadoPel[], eActor listadoAct[], int len,
     int i;
     int posActorDeGenero;
     printf("Actores que trabajaron en peliculas de %s \n", generoAlistar);
+
     for(i = 0; i<len; i++)
     {
         if(listadoPel[i].estado == 0 && stricmp(generoAlistar, listadoPel[i].genero)==0)
@@ -91,7 +92,7 @@ int listarPeliculasPorNacionalidadIngresada(ePelicula listadoPel[], eActor lista
             {
                 if(listadoPel[j].idActor == listadoAct[i].id)
                 {
-                     printf("%s \n",listadoPel[j].titulo);
+                    printf("%s \n",listadoPel[j].titulo);
                 }
 
 
@@ -255,7 +256,6 @@ void actoresQueNoTrabajaron(ePelicula listadoPel[], eActor listadoAct[], int len
 
     for(i=0; i<len; i++)
     {
-
         auxCantidad = participaciones(listadoPel, len, listadoAct[i].id);
 
         if(listadoAct[i].estado == 0 && auxCantidad == 0)
@@ -266,6 +266,26 @@ void actoresQueNoTrabajaron(ePelicula listadoPel[], eActor listadoAct[], int len
     }
 
 
+
+}
+
+void actoresAntesDeFecha(ePelicula listadoPel[], eActor listadoAct[], int len, int fecha)
+{
+    int i;
+    int posActor;
+
+    printf("%s %d\n", "Actores de antes del ", fecha);
+
+    for(i = 0; i<len; i++)
+    {
+        if(listadoPel[i].estado == 0 && listadoPel[i].fechaDeEstreno < fecha)
+        {
+            posActor = buscarActorPorID(listadoAct, len, listadoPel[i].idActor);
+
+            printf("%s \n", listadoAct[posActor].nombreActor);
+
+        }
+    }
 
 }
 

@@ -116,4 +116,15 @@ int cantidadPeliculasPorGenero(ePelicula listadoPel[], int len, char generoAcont
  */
 void generoConMenosPeliculas(ePelicula listadoPel[], int len);
 
+
+/** \brief
+ *
+ * \param listadoPel[] ePelicula
+ * \param listadoAct[] eActor
+ * \param len int
+ * \param fecha int
+ * \return void
+ *
+ */
+void actoresAntesDeFecha(ePelicula listadoPel[], eActor listadoAct[], int len, int fecha);
 #endif // REPORTES_H_INCLUDED
