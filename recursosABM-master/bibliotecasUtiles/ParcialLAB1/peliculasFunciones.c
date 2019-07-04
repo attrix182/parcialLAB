@@ -31,7 +31,6 @@ int altaPeliculas(ePelicula listado[], eActor listadoActores[], int len)
     int idActor;
     int generoNumero;
     int idExiste;
-    //int codigoPeliculaAverificar;
 
     id = buscarLibrePelicula(listado, len);
 
@@ -147,7 +146,7 @@ int buscarPeliPorID(ePelicula listado[], int len,int id)
     int i;
     for(i = 0; i<len; i++)
     {
-        if(listado[i].id == id)
+        if(listado[i].estado == 0 && listado[i].id == id)
         {
             return i;
         }
@@ -166,6 +165,7 @@ int bajaPelicula(ePelicula listado[], int len, int id)
         return -1;
     }
     listado[idAborrar].estado = 1;
+
     return 0;
 }
 

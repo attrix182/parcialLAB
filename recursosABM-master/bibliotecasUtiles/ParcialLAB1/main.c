@@ -41,9 +41,13 @@ int main()
 
             break;
         case 2:
-            opcionListar = getOptionShow();
+
+          do{
+                 opcionListar = getOptionShow();
+
             switch(opcionListar)
             {
+
             case 1:
                 mostrarListadoPeliculas(listadoPeliculas, TAM);
                 break;
@@ -121,8 +125,9 @@ int main()
                 printf("%s", "Opcion Invalida\n");
                 break;
             }
-
-            break;
+          }
+          while(opcionListar < 1 || opcionListar > 12);
+          break;
         case 3:
             mostrarPeliculasConActores(listadoPeliculas, listadoActores, TAM);
             id = getInt("Ingrese ID de Pelicula a modificar \n");
@@ -146,6 +151,7 @@ int main()
                 idExiste = buscarPeliPorID(listadoPeliculas, TAM, id);
 
             }
+
             bajaPelicula(listadoPeliculas, TAM, id);
             break;
         case 5:
@@ -153,7 +159,7 @@ int main()
             break;
 
         default:
-            printf("opcion invlaida \n");
+            printf("Opcion invalida \n");
             break;
         }
         system("pause");
