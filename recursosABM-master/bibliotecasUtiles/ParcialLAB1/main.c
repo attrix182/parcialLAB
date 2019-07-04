@@ -49,7 +49,9 @@ int main()
             {
 
             case 1:
-                mostrarListadoPeliculas(listadoPeliculas, TAM);
+
+                peliculasAgrupadasPorActor(listadoPeliculas, listadoActores, TAM, 2);
+              //  mostrarListadoPeliculas(listadoPeliculas, TAM);
                 break;
             case 2:
                 mostrarPeliculasConActores(listadoPeliculas, listadoActores, TAM);

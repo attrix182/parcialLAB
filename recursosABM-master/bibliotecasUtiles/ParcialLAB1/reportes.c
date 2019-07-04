@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int listarActoresPorGenero(ePelicula listadoPel[], eActor listadoAct[], int len,  char generoAlistar[21])
+void listarActoresPorGenero(ePelicula listadoPel[], eActor listadoAct[], int len,  char generoAlistar[21])
 {
     int i;
     int posActorDeGenero;
@@ -21,7 +21,7 @@ int listarActoresPorGenero(ePelicula listadoPel[], eActor listadoAct[], int len,
         }
 
     }
-    return 0;
+
 }
 
 int mostrarPeliculasConActores(ePelicula listadoPeliculas[], eActor listadoActores[], int len)
@@ -288,5 +288,35 @@ void actoresAntesDeFecha(ePelicula listadoPel[], eActor listadoAct[], int len, i
     }
 
 }
+
+
+
+void peliculasAgrupadasPorActor(ePelicula listadoPel[], eActor listadoAct[], int len, int idDeActor)
+{
+
+    int actorSub = buscarActorPorID(listadoAct, len, idDeActor);
+    int i;
+    int existen = 0;
+    printf(" %s %s  \n", "Peliculas del actor: ", listadoAct[actorSub].nombreActor);
+
+    for(i = 0; i<len; i++)
+    {
+
+
+        if(listadoPel[i].estado == 0 && listadoPel[i].idActor == idDeActor)
+        {
+            printf("%s  \n", listadoPel[i].titulo);
+            existen = 1;
+        }
+ }
+    if(existen == 0)
+    {
+        printf("\n No hay peliculas con ese actor\n");
+    }
+
+    printf("\n");
+
+}
+
 
 

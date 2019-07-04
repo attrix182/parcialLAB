@@ -1,18 +1,18 @@
 #ifndef REPORTES_H_INCLUDED
 #define REPORTES_H_INCLUDED
 
-/** \brief
+/** \brief Lista actores pertenecientes a un genero ingresado por parametro
  *
  * \param ePelicula[]
  * \param eActor[]
  * \param len int
  * \param generoAlistar[21] char
- * \return int
+ * \return void
  *
  */
-int listarActoresPorGenero(ePelicula[], eActor[], int len, char generoAlistar[21]);
+void listarActoresPorGenero(ePelicula[], eActor[], int len, char generoAlistar[21]);
 
-/** \brief
+/** \brief Muestra peliculas con actores
  *
  * \param ePelicula[]
  * \param eActor[]
@@ -22,7 +22,7 @@ int listarActoresPorGenero(ePelicula[], eActor[], int len, char generoAlistar[21
  */
 int mostrarPeliculasConActores(ePelicula[], eActor[], int len);
 
-/** \brief
+/** \brief Lista peliculas pertenecientes a una nacionalidad de actor ingresada por parametro
  *
  * \param listadoPel[] ePelicula
  * \param listadoAct[] eActor
@@ -33,7 +33,7 @@ int mostrarPeliculasConActores(ePelicula[], eActor[], int len);
  */
 int listarPeliculasPorNacionalidad(ePelicula[], eActor[], int len,  char nacionalidadAlistar[21]);
 
-/** \brief
+/** \brief Lista peliculas pertenecientes a una nacionalidad de actor ingresada por parametro
  *
  * \param ePelicula[]
  * \param eActor[]
@@ -127,4 +127,15 @@ void generoConMenosPeliculas(ePelicula listadoPel[], int len);
  *
  */
 void actoresAntesDeFecha(ePelicula listadoPel[], eActor listadoAct[], int len, int fecha);
+
+/** \brief
+ *
+ * \param listadoPel[] ePelicula
+ * \param listadoAct[] eActor
+ * \param len int
+ * \param idDeActor int
+ * \return void
+ *
+ */
+void peliculasAgrupadasPorActor(ePelicula listadoPel[], eActor listadoAct[], int len, int idDeActor);
 #endif // REPORTES_H_INCLUDED
